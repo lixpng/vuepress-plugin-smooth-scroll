@@ -13,7 +13,7 @@ export default ({ Vue, router }) => {
         return false
       }
 
-      const targetElement = document.querySelector(to.hash)
+      const targetElement = document.querySelector(decodeURIComponent(to.hash))
 
       if (targetElement) {
         return window.scrollTo({
